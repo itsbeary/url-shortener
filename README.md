@@ -19,6 +19,7 @@ cd url-shortener
 
 ## Setup
 
+Create the PostgreSQL database
 ```sql
 CREATE DATABASE urlshortener;
 ```
