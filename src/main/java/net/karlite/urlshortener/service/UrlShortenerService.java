@@ -16,6 +16,10 @@ public class UrlShortenerService {
     private static final String BASE_URL = "http://localhost:8080/";
 
     public String shortenUrl(String originalUrl) {
+        // FIX: Add https:// if it is missing from original url
+        if(!originalUrl.startsWith("http://") && !originalUrl.startsWith("https://"))
+            originalUrl = "https://" + originalUrl;
+
         String shortCode = generateShortCode();
 
         UrlMapping mapping = new UrlMapping();
